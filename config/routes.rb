@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'horrifyingly_large_insects#index'
   resources :hollywoodesque_neuroses
   resources :child_actors
   resources :horrifyingly_large_insects

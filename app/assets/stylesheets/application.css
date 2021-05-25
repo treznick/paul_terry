@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   background-color: AntiqueWhite;
+ }
+
+ h1 {
+   font-family: Brush Script MT;
+   font-size: 8em;
+ }
