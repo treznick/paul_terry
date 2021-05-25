@@ -1,0 +1,1 @@
+json.partial! "horrifyingly_large_insects/horrifyingly_large_insect", horrifyingly_large_insect: @horrifyingly_large_insect

@@ -1,0 +1,2 @@
+module ChildActorsHelper
+end

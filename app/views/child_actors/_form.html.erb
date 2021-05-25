@@ -1,0 +1,27 @@
+<%= form_with(model: child_actor) do |form| %>
+  <% if child_actor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(child_actor.errors.count, "error") %> prohibited this child_actor from being saved:</h2>
+
+      <ul>
+        <% child_actor.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :traumatized_child %>
+    <%= form.text_field :traumatized_child %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

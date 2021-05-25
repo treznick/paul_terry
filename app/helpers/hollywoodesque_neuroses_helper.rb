@@ -1,0 +1,2 @@
+module HollywoodesqueNeurosesHelper
+end

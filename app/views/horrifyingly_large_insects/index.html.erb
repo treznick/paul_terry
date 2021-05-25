@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Horrifyingly Large Insects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Traumatized child</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @horrifyingly_large_insects.each do |horrifyingly_large_insect| %>
+      <tr>
+        <td><%= horrifyingly_large_insect.name %></td>
+        <td><%= horrifyingly_large_insect.traumatized_child_id %></td>
+        <td><%= link_to 'Show', horrifyingly_large_insect %></td>
+        <td><%= link_to 'Edit', edit_horrifyingly_large_insect_path(horrifyingly_large_insect) %></td>
+        <td><%= link_to 'Destroy', horrifyingly_large_insect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Horrifyingly Large Insect', new_horrifyingly_large_insect_path %>

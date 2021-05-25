@@ -1,0 +1,27 @@
+<%= form_with(model: cruel_aunt) do |form| %>
+  <% if cruel_aunt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cruel_aunt.errors.count, "error") %> prohibited this cruel_aunt from being saved:</h2>
+
+      <ul>
+        <% cruel_aunt.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cruel_aunt_id %>
+    <%= form.text_field :cruel_aunt_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @child_actor.name %>
+</p>
+
+<p>
+  <strong>Traumatized child:</strong>
+  <%= @child_actor.traumatized_child %>
+</p>
+
+<%= link_to 'Edit', edit_child_actor_path(@child_actor) %> |
+<%= link_to 'Back', child_actors_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Child Actors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Traumatized child</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @child_actors.each do |child_actor| %>
+      <tr>
+        <td><%= child_actor.name %></td>
+        <td><%= child_actor.traumatized_child %></td>
+        <td><%= link_to 'Show', child_actor %></td>
+        <td><%= link_to 'Edit', edit_child_actor_path(child_actor) %></td>
+        <td><%= link_to 'Destroy', child_actor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Child Actor', new_child_actor_path %>

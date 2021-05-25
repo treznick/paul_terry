@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hollywoodesque Neuroses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Child actor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hollywoodesque_neuroses.each do |hollywoodesque_neurose| %>
+      <tr>
+        <td><%= hollywoodesque_neurose.name %></td>
+        <td><%= hollywoodesque_neurose.child_actor_id %></td>
+        <td><%= link_to 'Show', hollywoodesque_neurose %></td>
+        <td><%= link_to 'Edit', edit_hollywoodesque_neurose_path(hollywoodesque_neurose) %></td>
+        <td><%= link_to 'Destroy', hollywoodesque_neurose, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hollywoodesque Neurose', new_hollywoodesque_neurose_path %>

@@ -1,0 +1,27 @@
+<%= form_with(model: horrifyingly_large_insect) do |form| %>
+  <% if horrifyingly_large_insect.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(horrifyingly_large_insect.errors.count, "error") %> prohibited this horrifyingly_large_insect from being saved:</h2>
+
+      <ul>
+        <% horrifyingly_large_insect.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :traumatized_child_id %>
+    <%= form.text_field :traumatized_child_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
